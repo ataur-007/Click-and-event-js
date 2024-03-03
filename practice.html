@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul id="listItem">
+            <li id="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eos.</li>
+            <li id="item">Esse optio quia laborum sequi nemo possimus, voluptatum id voluptates.</li>
+            <li id="item">Nostrum officiis iusto error illum animi quaerat ipsum fugit praesentium?</li>
+            <li id="item">Excepturi delectus, eius provident veritatis enim ipsum molestiae? Delectus, repellat.</li>
+        </ul>
+        <button id="oneClick">Add a new</button>
+    </nav>
+
+    <button id="new1">First</button>
+    <button id="new2">Second</button>
+    <button id="new3">Third</button>
+    <button id="new4">Four</button>
+    <script>
+        document.getElementById('listItem').addEventListener('click', 
+        function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+     document.getElementById('oneClick').addEventListener('click', 
+     function(event){
+        var items = document.getElementById('listItem');
+        var newItem = document.createElement('li');
+        newItem.innerHTML = 'this is new add';
+        items.appendChild(newItem);
+     })
+
+//button
+     function buttonColor(){
+        document.body.style.backgroundColor = 'red';
+        document.body.style.color = 'white';
+        
+     }
+     const newcolor = document.getElementById('new1');
+     newcolor.addEventListener('click', buttonColor)
+
+
+// second button
+     function buttonColor1(){
+        document.body.style.backgroundColor = 'blue';
+        document.body.style.color = 'yellow';
+        
+     }
+     const newcolor1 = document.getElementById('new2');
+     newcolor1.addEventListener('click', buttonColor1)
+
+// third button
+     function buttonColor2(){
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'white'; 
+     }
+     const newcolor2 = document.getElementById('new3');
+     newcolor2.addEventListener('click', buttonColor2)
+
+// four button
+     function buttonColor3(){
+        document.body.style.backgroundColor = 'gray';
+        document.body.style.color = 'white';
+        
+     }
+     const newcolor3 = document.getElementById('new4');
+     newcolor3.addEventListener('click', buttonColor3)
+    </script>
+</body>
+</html>
